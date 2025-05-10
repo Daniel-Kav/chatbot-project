@@ -10,9 +10,10 @@ load_dotenv()
 
 # Configure the Gemini API
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+print("GOOGLE_API_KEY:", os.getenv("GOOGLE_API_KEY"))
 
 # Initialize the model
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-2.0-flash')
 
 app = FastAPI()
 
